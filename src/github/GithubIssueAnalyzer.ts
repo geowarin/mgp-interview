@@ -71,7 +71,8 @@ export default class GithubIssueAnalyzer {
    * Returns stats on the assignees
    */
   getNumberOfIssuesByAssignee(): AssigneeStats[] {
-    // HINT: _.map() works on a dictionary. The callback function arguments are (value, key, collection)
+    // HINT: _.map() works on a dictionary. The callback function arguments are (value, key, dictionary)
+    // in our case, the first argument are the issues, the second is the person's login
     return [];
   }
 
