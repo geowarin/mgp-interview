@@ -29,8 +29,8 @@ it("should give issue titles", () => {
 
 it("should get issues with at least four comments", () => {
 
-  let issuesWithComments = analyzer.getDebatedIssues();
-  expect(issuesWithComments.map(i => i.title).sort())
+  let debatedIssues = analyzer.getDebatedIssues();
+  expect(debatedIssues.map(i => i.title).sort())
     .toEqual([
       "Rails 5 Changes Lookup Order of Virtual SQL Attributes",
       "Running system tests doesn’t output the correct number of assertions made"
@@ -48,7 +48,7 @@ it("should get issues with the 'activerecord' label", () => {
     ])
 });
 
-it("should get the total number of issues", () => {
+it("should get the total number of comments", () => {
 
   expect(analyzer.getTotalNumberOfComments())
     .toEqual(37)
